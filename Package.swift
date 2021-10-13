@@ -22,7 +22,14 @@ let package = Package(
     targets: [
         .target(
             name: "CommonsPack",
-            dependencies: [],
+            dependencies: [
+                "Alamofire",
+                "AlamofireImage",
+                "AlamofireNetworkActivityLogger",
+                "OHHTTPStubs",
+                "SwiftKeychainWrapper",
+                "Lottie"
+            ],
             resources: [
                 .copy("Resources")
             ]
