@@ -466,6 +466,10 @@ open class AuthenticatedAPI {
 }
 
 public struct AdapterArray: RequestAdapter, ExpressibleByArrayLiteral {
+    public func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
+
+    }
+
 
     public typealias ArrayLiteralElement = AdapterType
 

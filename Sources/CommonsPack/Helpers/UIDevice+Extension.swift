@@ -7,6 +7,7 @@
 
 // swiftlint:disable explicit_init identifier_name
 import Foundation
+import UIKit
 
 public enum Model: String {
     case simulator     = "simulator/sandbox",

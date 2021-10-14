@@ -8,6 +8,7 @@
 //swiftlint:disable missing_docs
 //swiftlint:disable line_length
 
+import Foundation
 /// Methods to access General App configuration
 public extension Configuration.App {
 

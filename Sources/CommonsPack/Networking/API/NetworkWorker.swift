@@ -113,7 +113,7 @@ final class NetworkWorker: AuthenticatedAPI, NetworkRequestable {
         failure: @escaping ErrorCallBack) {
         self.request(
             url: url,
-            method: .post,
+            method: Alamofire.HTTPMethod.post,
             parameters: params,
             encoding: URLEncoding.default,
             headers: headers,
@@ -136,7 +136,7 @@ final class NetworkWorker: AuthenticatedAPI, NetworkRequestable {
         failure: @escaping ErrorCallBack) {
         self.request(
             url: url,
-            method: .get,
+            method: Alamofire.HTTPMethod.get,
             parameters: params,
             encoding: URLEncoding.default,
             headers: headers,
@@ -159,7 +159,7 @@ final class NetworkWorker: AuthenticatedAPI, NetworkRequestable {
         failure: @escaping ErrorCallBack) {
         self.request(
             url: url,
-            method: .put,
+            method: Alamofire.HTTPMethod.put,
             parameters: params,
             encoding: URLEncoding.default,
             headers: headers,
@@ -183,7 +183,7 @@ final class NetworkWorker: AuthenticatedAPI, NetworkRequestable {
 
         self.request(
             url: url,
-            method: .delete,
+            method: Alamofire.HTTPMethod.delete,
             parameters: params,
             encoding: URLEncoding.default,
             headers: headers,

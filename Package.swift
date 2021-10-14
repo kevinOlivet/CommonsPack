@@ -5,7 +5,8 @@ import PackageDescription
 
 let package = Package(
     name: "CommonsPack",
-    platforms: [.iOS(.v13)],
+    defaultLocalization: "en",
+    platforms: [.iOS(.v14)],
     products: [
         .library(
             name: "CommonsPack",
@@ -31,7 +32,7 @@ let package = Package(
                 "Lottie"
             ],
             resources: [
-                .copy("Resources")
+                .process("Resources")
             ]
         ),
         .testTarget(

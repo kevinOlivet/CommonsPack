@@ -5,6 +5,8 @@
 //  Copyright © Jon Olivet
 //
 
+import UIKit
+
 /// UIView shadow
 public extension UIView {
 
