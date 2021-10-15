@@ -197,7 +197,7 @@ final class NetworkWorker: AuthenticatedAPI, NetworkRequestable {
         )
     }
 
-    func onComplete(response: DataResponse<Data>, success: SuccessCallBack, failure: ErrorCallBack) {
+    func onComplete(response: DataResponse<Data, Error>, success: SuccessCallBack, failure: ErrorCallBack) {
         let status = response.response?.statusCode
         if response.result.isSuccess {
             let payload = response.result.value

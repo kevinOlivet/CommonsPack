@@ -211,7 +211,7 @@ open class AuthenticatedAPI {
         authenticationHeaderIsNeeded: Bool = true,
         timeout: Double? = nil, //deprecated
         adapters: AdapterArray = [],
-        onSuccess: @escaping ((DataResponse<Data>) -> Void),
+        onSuccess: @escaping ((DataResponse<Data, Error>) -> Void),
         onFailure: @escaping (NTError, Int) -> Void) {
 
         let hasEncryption = encryptionStatusWithMockServer(encrypted: encryptionIsNeeded)

@@ -32,6 +32,7 @@ let package = Package(
                 "Lottie"
             ],
             resources: [
+//                .copy("Resources")
                 .process("Resources")
             ]
         ),
