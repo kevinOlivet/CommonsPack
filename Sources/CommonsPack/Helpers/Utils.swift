@@ -96,7 +96,7 @@ public class KeyboardConstraint: NSLayoutConstraint {
 public class Utils: NSObject {
 
     static func appendActivityTo(view: UIView) -> UIActivityIndicatorView {
-        let aiv = UIActivityIndicatorView(style: .gray)
+        let aiv = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
         aiv.startAnimating()
         aiv.center = view.center
         aiv.hidesWhenStopped = true

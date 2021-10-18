@@ -28,6 +28,7 @@ let package = Package(
                 "AlamofireImage",
                 "AlamofireNetworkActivityLogger",
                 "OHHTTPStubs",
+                .product(name: "OHHTTPStubsSwift", package: "OHHTTPStubs"),
                 "SwiftKeychainWrapper",
                 "Lottie"
             ],

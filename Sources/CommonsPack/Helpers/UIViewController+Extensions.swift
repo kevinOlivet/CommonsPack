@@ -17,7 +17,7 @@ public extension UIViewController{
 
         indicator = UIActivityIndicatorView(frame: self.view.frame)
         indicator.center = self.view.center
-        indicator.style = .whiteLarge
+        indicator.style = UIActivityIndicatorView.Style.large
         indicator.color = UIColor.black
         indicator.hidesWhenStopped = true
         indicator.startAnimating()
