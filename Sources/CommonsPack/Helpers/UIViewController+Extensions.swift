@@ -11,7 +11,7 @@ public extension UIViewController{
     func showModalLoadingView() -> UIActivityIndicatorView {
         
         // User cannot interact with the app while the loadingView is visible
-        UIApplication.shared.beginIgnoringInteractionEvents()
+        view.isUserInteractionEnabled = false
 
         var indicator = UIActivityIndicatorView()
 
@@ -34,6 +34,6 @@ public extension UIViewController{
         indicator.isHidden = true
 
         // user can interact again with the app
-        UIApplication.shared.endIgnoringInteractionEvents()
+        view.isUserInteractionEnabled = false
     }
 }
