@@ -91,10 +91,14 @@ public enum Configuration {
 
     /// Access the base configuration directly
     public static var baseConfigurationDictionary: [String: Any] {
-        let baseConfigurationsResoucePath: URL? = Bundle.main.url(
-            forResource: "Configurations",
-            withExtension: "plist"
-        )
+        var baseConfigurationsResoucePath: URL? {
+            if let mainConfiguraton = Bundle.main.url(forResource: "Configurations", withExtension: "plist") {
+                return mainConfiguraton  // Use for running the app
+            } else if let moduleConfiguraton = Bundle.module.url(forResource: "Configurations", withExtension: "plist") {
+                return moduleConfiguraton // Use for running unit tests
+            }
+            return nil
+        }
 
         let data: Data? = try? Data(contentsOf: baseConfigurationsResoucePath!)
 
