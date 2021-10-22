@@ -18,7 +18,7 @@ extension String {
 
     // swiftlint:disable localized_not_NSLocalized
     public var localized: String {
-        Bundle.projectBundles
+        Bundle.allBundles
             .lazy
             .map {
                     NSLocalizedString(
@@ -32,9 +32,9 @@ extension String {
             .first { $0 != self } ?? self
     }
 
-    public func localized(in whichBundle: Bundle.Project) -> String {
-        Bundle.projectBundles
-            .filter { $0.bundleIdentifier == whichBundle.identifier }
+    public func localized(in whichBundle: Bundle) -> String {
+        Bundle.allBundles
+            .filter { $0 == whichBundle }
             .lazy
             .map {
                 NSLocalizedString(
